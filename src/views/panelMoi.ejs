@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head') %> 
+<body>
+    <%- include('./partials/header') %> 
+      <h1 class="pruebaTitle" style="margin-bottom: 40px
+      ;">Panel de Administración para Moi</h1>
+      <div class="clientContainer">
+          <h2>Clientes</h2>
+          <div class="clients">
+            <div>
+                <h3>Nombre del Hipico</h3>
+            </div>
+            <div>
+              <h3>Nombre del Hipico</h3>
+            </div>
+            <div>
+              <h3>Nombre del Hipico</h3>
+            </div>
+          </div>
+          
+      </div>
+      <div class="debtContainer">
+          <h2>Clientes con Deudas</h2>
+          <div class="contt">
+            <div class="clientTotalDebt">
+                <h2>Nombre del Cliente</h2>
+                <h3>Subscripcion Mensual: $$$$</h3>
+                <div class="clientPartialDebt">
+                    <h3>Nombre del Concurso</h3>
+                    <h4>Fecha del Concurso</h4>
+                    <h4>Total Recaudado:$$$$</h4>
+                    <h4>Comision%:$$$$</h4>
+                    <h3 style="border-top:1px solid black;">Deuda Parcial:$$$$</h3>
+                </div>
+                <h3 style="border-top:1px solid black;">Deuda Total:$$$$</h3>
+                <form action="">
+                    <input type="text" style="display: none;" value="deudaTotal">
+                    <input type="text" style="display: none;" value="hipicoId">
+                    <button>Ya Pago</button>
+                </form>
+              </div>
+              <div class="clientTotalDebt">
+                <h2>Nombre del Cliente</h2>
+                <h3>Subscripcion Mensual: $$$$</h3>
+                <div class="clientPartialDebt">
+                    <h3>Nombre del Concurso</h3>
+                    <h4>Fecha del Concurso</h4>
+                    <h4>Total Recaudado:$$$$</h4>
+                    <h4>Comision%:$$$$</h4>
+                    <h3 style="border-top:1px solid black;">Deuda Parcial:$$$$</h3>
+                </div>
+                <h3 style="border-top:1px solid black;">Deuda Total:$$$$</h3>
+                <form action="">
+                    <input type="text" style="display: none;" value="deudaTotal">
+                    <input type="text" style="display: none;" value="hipicoId">
+                    <button>Ya Pago</button>
+                </form>
+              </div>
+          </div>
+      </div>
+      <%- include('./partials/scripts') %>
+      </body>

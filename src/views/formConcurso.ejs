@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head') %> 
+<body>
+    <%- include('./partials/header') %> 
+      <div class="formContainer">
+          <form action="" enctype="multipart/form-data">
+              <label for="name">Nombre</label>
+              <input type="text" name="name">
+              <label for="date">Fecha</label>
+              <input type="text" name="date">
+              <label for="program">Anteprograma (link)</label>
+              <input type="url" name="program">
+              <label for="hipico">Club Hipico</label>
+                <select name="hipico" id="">
+                    <option value=""></option>
+                    <option value="1">CHA</option>
+                    <option value="2">CAE</option>
+                    <option value="3">SJV</option>
+                </select>
+              <button type="submit">Crear Concurso</button>
+          </form>
+      </div>
+      <%- include('./partials/scripts') %>
+      </body>

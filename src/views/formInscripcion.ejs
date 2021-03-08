@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head') %> 
+<body>
+    <%- include('./partials/header') %> 
+    <h1 class="pruebaTitle">Formulario de Inscripción</h1>
+      <div class="formContainer">
+          <form action="" enctype="multipart/form-data">
+              <label for="name">Nombre</label>
+              <input type="text" name="name">
+              <label for="surname">Apellido</label>
+              <input type="text" name="surname">
+              <label for="horse">Caballo</label>
+              <input type="text" name="horse">
+              <label for="program">Categoria</label>
+                <select name="category" id="">
+                    <option value=""></option>
+                    <option value="1">2nda</option>
+                    <option value="1">1era</option>
+                    <option value="1">Amateur</option>
+                </select>
+              <label for="hipico">Club Hipico</label>
+                <select name="hipico" id="">
+                    <option value=""></option>
+                    <option value="1">CHA</option>
+                    <option value="2">CAE</option>
+                    <option value="3">SJV</option>
+                </select>
+                <label for="country">Pais</label>
+                <select name="country" id="">
+                    <option value=""></option>
+                    <option value="1">ARG</option>
+                    <option value="2">BRA</option>
+                    <option value="3">CHI</option>
+                </select>
+                <p>*Las inscripciones solo se realizan despues de efectuar el pago. Para hacerlo, hace click en "Pagar inscripciones", luego de llenar el formulario</p>
+              <button type="submit">Inscribirme</button>
+          </form>
+      </div>
+      <%- include('./partials/scripts') %>
+      </body>

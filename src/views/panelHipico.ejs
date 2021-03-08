@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head') %> 
+<body>
+    <%- include('./partials/header') %> 
+    <h1 class="pruebaTitle" style="margin-bottom: 40px
+    ;">Panel de Administración para Organizaciones Hipicas</h1>
+          <h2 style="width: 100%; text-align: center;">Mis Datos</h2>
+    <div class="infoHipico formContainer">
+      <form action="" enctype="multipart/form-data">
+        <label for="name">Nombre</label>
+        <input type="text" name="name" id="">
+        <label for="logo">Logo</label>
+        <input type="file">
+        <label for="adress">Direccion</label>
+        <input type="text" name="adress">
+        <label for="email">Email</label>
+        <input type="email" name="email">
+        <button type="submit">Guardar Cambios</button>
+      </form>
+    </div>
+    
+      <div class="onCourseContainer">
+        <h2>Concursos en Curso</h2>
+        <div class="onCourse">
+            <h3>Nombre del Concurso</h3>
+            <h5>Fecha del Concurso</h5>
+            <h4>Total recaudado hasta el momento:$$$$</h4>
+            <p>*El total se calcula unicamente en base a las inscripciones realizadas a traves de RideSystem</p>
+        </div>
+        <div class="onCourse">
+            <h3>Nombre del Concurso</h3>
+            <h5>Fecha del Concurso</h5>
+            <h4>Total recaudado hasta el momento:$$$$</h4>
+            <p>*El total se calcula unicamente en base a las inscripciones realizadas a traves de RideSystem</p>
+        </div>
+      </div>
+      <div class="pendingContainer">
+          <h3>Deudas Pendientes</h3>
+          <h4>Importe mensual $$$$$$</h4>
+          <h4>Comision de inscripciones $$$$$$</h4>
+          <div class="pending">
+            <h5>Nombre del Concurso</h5>
+            <h5>Fecha del Concurso</h5>
+            <h5>Total Recaudado:$$$$</h5>
+            <h5>Comision%:$$$$</h5>
+            <h5>Deuda parcial:$$$$</h5>
+          </div>
+          <div class="pending">
+            <h5>Nombre del Concurso</h5>
+            <h5>Fecha del Concurso</h5>
+            <h5>Total Recaudado:$$$$</h5>
+            <h5>Comision%:$$$$</h5>
+            <h5>Deuda parcial:$$$$</h5>
+          </div>
+          <h5 class="pendingTotal" style="margin-bottom: 40px
+          ;">Deuda Total $$$$$$</h5>
+      </div>
+      <div class="onCourseContainer">
+          <h2>Historial de Concursos</h2>
+          <div class="onCourse">
+            <h3>Nombre del Concurso</h3>
+            <h4>Total Recaudado</h4>
+            <p>*El total se calcula unicamente en base a las inscripciones realizadas a traves de RideSystem</p>
+          </div>
+      </div>
+      <%- include('./partials/scripts') %>
+      </body>

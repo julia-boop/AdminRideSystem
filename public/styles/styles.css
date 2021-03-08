@@ -1,0 +1,817 @@
+/* --------------------------GENERAL-------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap');
+
+* {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+/* --------------------------MOBILE HEADER-------------------------- */
+
+.navMobile{
+    display: none
+}
+
+.navMobile a {
+    margin-left: 10px;
+}
+
+.btnMenu {
+    position: fixed;
+    z-index: 50;
+    top: -2.5%;
+    right: 2%;
+    height: max-content;
+    width: max-content;
+    text-align: center;
+    border: none;
+    transition: left 0.7s ease;
+    outline: none;
+    box-shadow: none;
+    background-color: black;
+    border-radius: 5px;
+}
+
+.btnMenu:focus{
+    box-shadow: none;
+}
+
+svg{
+    padding: 0 auto;
+    outline: none;
+    box-shadow: none;
+    background-color: black;
+}
+
+svg:focus{
+    box-shadow: none;
+}
+
+.line {
+    fill: none;
+    stroke: white;
+    stroke-width: 6;
+    transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+    stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.line1 {
+    stroke-dasharray: 60 207;
+    stroke-width: 6;
+}
+.line2 {
+    stroke-dasharray: 60 60;
+    stroke-width: 6;
+}
+.line3 {
+    stroke-dasharray: 60 207;
+    stroke-width: 6;
+}
+.opened .line1 {
+    stroke-dasharray: 90 207;
+    stroke-dashoffset: -134;
+    stroke-width: 6;
+}
+.opened .line2 {
+    stroke-dasharray: 1 60;
+    stroke-dashoffset: -30;
+    stroke-width: 6;
+}
+.opened .line3 {
+    stroke-dasharray: 90 207;
+    stroke-dashoffset: -134;
+    stroke-width: 6;
+}
+
+.sidebar {
+    position: absolute;
+    z-index: 1000;
+    top: 0%;
+    width: 20%;
+    height: 100vh;
+    background: #1f1f1f!important;
+    font-size: 0.65em;
+    transition: background-color 0.7s, border-radius 0.4s;  
+      right: -500px;
+      transition: right 0.4s ease;
+      display: none;
+  }
+  
+  .click{
+      right: 300px;
+      border: none;
+  }
+  
+  .show{
+      right: 0px;
+      transition: right 0.7s ease;
+  }
+
+  .sidebar li{
+      list-style: none;
+      font-size: 20px;
+      margin-top: 15px;
+  }
+
+  .sidebar a{
+      color: white;
+  }
+
+  .sidebar a:hover{
+      font-weight: 600;
+  }
+
+  .btnMenu{
+      display: none;
+  }
+
+  
+
+/* --------------------------HOME-------------------------- */
+
+.portraitContainer img {
+    width: 100%;
+    opacity: 0.9;
+}
+
+.intro{
+    position: absolute;
+    z-index: 2;
+    top: 7%;
+}
+
+.intro h1{
+    margin: 50px;
+    width: 30%;
+    margin-left: 80px;
+    font-size: 45px;
+    padding: 20px;
+    font-weight: 700;
+    color: white;
+}
+
+.forContainer{
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.for{
+    width: 50%;
+    margin: 0;
+    height: 10rem;
+    margin: 10px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    transition: 1s ease-in-out;
+}
+
+.for:hover{
+    background-color: rgba(184, 184, 184, 0.801);
+}
+
+
+.for a {
+    font-size: 30px;
+    color: black;
+    text-decoration: none;
+
+}
+
+/* --------------------------LOGIN-------------------------- */
+
+.formContainer{
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    margin: 20px;
+    padding: 20px;
+    margin-top: 75px;
+}
+
+.formContainer form{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: whitesmoke;
+    width: 50%;
+    border-radius: 5px;
+}
+
+.formContainer p{
+    margin-top: 21px;
+}
+
+.formContainer form input, select, textarea{
+    width: 60%;
+    margin-top: 25px;
+    transition: 0.75s ease-in-out;
+}
+
+.formContainer form label, button{
+    width: 60%;
+    margin-top: 25px;
+    letter-spacing: 0.9rem;
+    text-transform: uppercase;
+    transition: 0.75s ease-in-out;
+}
+
+.formContainer button{
+    margin-bottom: 25px;
+    padding: 5px;
+    letter-spacing: 0.75rem;
+    border-radius: 5px;
+    border: 1px solid rgb(175, 175, 175);
+    background-color: rgb(117, 117, 117);
+    color: white;
+}
+
+.formContainer button:hover{
+    background-color: rgb(68, 68, 68);
+
+}
+
+.formContainer form input:focus, textarea:focus{
+    outline: none;
+    box-shadow: 0 0 5px 10px rgba(141, 141, 141, 0.541);
+   border-radius: 5px;
+}
+
+/* --------------------------CONCURSOS-------------------------- */
+
+.portadaConcurso img {
+    width: 100%;
+}
+
+.banner{
+    position: absolute;
+    z-index: 2;
+    top: 7%;
+}
+
+.banner h1{
+    margin: 50px;
+    width: 30%;
+    margin-left: 80px;
+    font-size: 45px;
+    padding: 20px;
+    font-weight: 700;
+    color: white;
+}
+
+.concursosContainer{
+    display: flex;
+    justify-content: center;
+}
+
+.concursosContainer div{
+    width: 35%;
+    margin: 30px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: whitesmoke;
+    border: 1px solid rgb(170, 170, 170);
+    border-radius: 5px;
+    transition: 0.5s ease-in-out;
+}
+
+.concursosContainer div:hover{
+    outline: none;
+    box-shadow: 0 0 5px 10px rgba(141, 141, 141, 0.541);
+   border-radius: 5px;
+}
+
+.concursosContainer div img{
+    border-radius: 50%;
+    width: 50%;
+}
+
+.concursosContainer div a {
+    color: black;
+    font-weight: 700;
+    transition: 0.3s ease-in-out;
+}
+
+.concursosContainer div a:hover, a:focus {
+    text-decoration: underline;
+}
+
+
+/* --------------------------DETALLE CONCURSOS-------------------------- */
+
+.infoConcurso{
+    width: 100%;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.infoConcurso h1,.infoConcurso h2,.infoConcurso h3,.infoConcurso h4{
+    text-align: center;
+}
+
+.pruebasContainer{
+    width: 100%;
+    margin-bottom: 40px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+}
+
+.pruebasContainer h3{
+    text-align: center;
+}
+
+.pruebasContainer table{
+    width: 80%;
+    border-radius: 5px;
+}
+
+.pruebasContainer table th{
+    font-weight: 400;
+}
+
+.pruebasContainer table, tr, th, td{
+    border: 1px solid black;
+    padding: 5px;
+}
+
+.prue{
+    width: 100%;
+}
+
+.but{
+    letter-spacing: normal;
+    text-transform: capitalize;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.slide {
+    display: none;
+    text-align: center;
+}
+
+.tableContainer{
+    overflow-x: scroll;
+    width: 100%;
+    padding: 10px;
+}
+
+/* --------------------------PRUEBA EDIT-------------------------- */
+
+.pruebaTitle{
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* --------------------------CUENTA-------------------------- */
+
+.bigCont{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.dataContainer{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    margin: 50px;
+}
+
+.dataContainer h3{
+    margin-bottom: 30px;
+    font-weight: 400;
+}
+
+.dataContainer button{
+    margin-bottom: 25px;
+    padding: 5px;
+    letter-spacing: 0.75rem;
+    border-radius: 5px;
+    border: 1px solid rgb(175, 175, 175);
+    background-color: rgb(117, 117, 117);
+    color: white;
+    width: max-content;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s ease-in-out;
+}
+
+.dataContainer button:hover{
+    background-color: rgb(68, 68, 68);
+}
+
+.dataContainer a{
+    color: white;
+    text-emphasis: none;
+    text-decoration: none;
+}
+
+/* --------------------------ADMIN HIPICO-------------------------- */
+
+.onCourseContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.onCourse {
+    margin: 20px;
+    border: 1px solid black;
+    padding:10px;
+}
+
+.pendingContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pendingContainer h4, .pendingContainer h3{
+    text-align: center;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.pending{
+    margin: 20px;
+    border: 1px solid black;
+    padding:10px;
+}
+
+.pendingTotal{
+    border-top: 1px solid black;
+}
+
+/* --------------------------ADMIN MOI-------------------------- */
+
+.clientContainer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.clients{
+    width: 75%;
+    display: flex;
+    justify-content: center;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    margin: 30px;
+}
+
+.clients div{
+    margin: 20px;
+    background-color: rgb(170, 170, 170);
+    border-radius: 5px;
+    width: 40%;
+}
+
+.debtContainer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contt{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    background-color: whitesmoke;
+    border-radius: 5px;
+
+}
+
+.clientTotalDebt{
+    margin: 20px;
+    padding: 15px;
+    background-color: rgb(170, 170, 170);
+    border-radius: 5px;
+
+}
+
+/* --------------------------MIS INSCRIPCIONES-------------------------- */
+
+.payContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+
+.pay{
+    width: 40%;
+    margin: 20px;
+    background-color: whitesmoke;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.pay button{
+    margin-bottom: 25px;
+        padding: 5px;
+        letter-spacing: 0.75rem;
+        border-radius: 5px;
+        border: 1px solid rgb(175, 175, 175);
+        background-color: rgb(117, 117, 117);
+        color: white;
+        width: max-content;
+        text-decoration: none;
+        text-align: center;
+        text-transform: uppercase;
+        transition: 0.5s ease-in-out;
+}
+
+.pay button:hover{
+    background-color: rgb(68, 68, 68);
+}
+
+.pay button a {
+    color: white;
+}
+
+.pay button a:hover{
+    color: white;
+}
+
+/* --------------------------MEDIA QUERIES-------------------------- */
+
+@media(max-width: 980px){
+    .intro h1{
+        font-size: 30px;
+    }
+
+    .forContainer div a {
+        text-align: center;
+    }
+
+    .pay h2 , .pay h3{
+        text-align: center;
+    }
+
+    .pay{
+        width: 70%;
+    }
+}
+
+@media(max-width: 800px){
+    .slide{
+        display: initial;
+    }
+
+    .banner{
+        top: 5%;
+    }
+
+    .banner h1{
+        margin-left: 30px;
+        font-size: 35px;
+    }
+
+
+}
+
+
+@media(max-width: 715px){
+    .intro h1{
+        font-size: 25px;
+        width: 40%;
+    }
+
+    .intro{
+        left:-5%;
+        top: -1%;
+    }
+
+    .navv{
+        display: none;
+    }
+
+    .sidebar{
+        display: initial;
+        width: 40%;
+    }
+
+    .btnMenu{
+        display: initial;
+    }
+
+    .navMobile{
+        display: inherit;
+    }
+
+    .formContainer{
+        margin: 0px;
+        margin-top: 50px;
+    }
+
+    .formContainer form {
+        width: 80%;
+    }
+
+    /* .infoConcurso h1{
+        margin-top: 100px;
+    } */
+
+    .pruebaTitle{
+        margin-top: 70px;
+    }
+
+    .banner{
+        top: 2%;
+    }
+
+    .concursosContainer div{
+        width: 55%;
+    }
+
+    .concursosContainer div h1, h2, h3, a{
+        text-align: center;
+    }
+
+    .clients{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .clients div{
+        width: 90%
+    }
+
+    .contt{
+        flex-direction: column;
+    }
+
+    .clientTotalDebt{
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    .clientTotalDebt form button{
+        width: 100%;
+        margin-bottom: 25px;
+        padding: 5px;
+        letter-spacing: 0.75rem;
+        border-radius: 5px;
+        border: 1px solid rgb(175, 175, 175);
+        background-color: rgb(117, 117, 117);
+        color: white;
+        width: max-content;
+        text-decoration: none;
+        text-align: center;
+        text-transform: uppercase;
+        transition: 0.5s ease-in-out;
+    }
+
+    .clientTotalDebt form button:hover{
+        background-color: rgb(68, 68, 68);
+    }
+}
+
+
+@media(max-width: 580px){
+    .intro h1{
+        font-size: 25px;
+        margin: 25px;
+        margin-top: 70px;
+        width: 60%;
+    }
+
+    .intro{
+        left: -1%;
+        top: -3%;
+    }
+
+    .forContainer div a{
+        font-size: 22px;
+    }
+
+    .sidebar{
+        width: 50%;
+    }
+
+    .sidebar ul{
+        padding-left: 20px!important;
+    }
+
+    .click{
+        right: 50%;
+    }
+
+    .formContainer form label{
+        letter-spacing: 0.5rem;
+        font-size: 13px;
+    }
+
+    .formContainer p {
+        text-align: center;
+        margin: 10px;
+    }
+
+    .formContainer button{
+        letter-spacing: 0.5rem;
+        font-size: 13px;
+    }
+
+    .banner h1{
+        width: 35%;
+        font-size: 30px;
+    }
+
+  
+}
+
+@media(max-width: 480px){
+    .banner h1{
+        width: 50%;
+        font-size: 25px;
+    }
+
+    .concursosContainer div{
+        width: 70%;
+    }
+
+    .concursosContainer div h1{
+        font-size: 20px;
+    }
+
+    .concursosContainer div h2{
+        font-size: 18px;
+    }
+
+    .concursosContainer div h3{
+        font-size: 16px;
+    }
+}
+
+@media(max-width: 400px){
+    .intro h1{
+        font-size: 24px;
+        margin: 15px;
+        margin-top: 35px;
+    }
+
+    .intro{
+        left: -1%;
+        top: 2%;
+    }
+
+    .forContainer div a{
+        font-size: 20px;
+    }
+
+    .sidebar li{
+        font-size: 17px;
+    }
+
+    .formContainer input, .formContainer label{
+        width: 75%;
+    }
+
+    .pruebaTitle{
+        font-size: 35px;
+    }
+
+    .banner h1{
+        margin-top: 35px;
+        margin-left: 0px;
+    }
+
+    .dataContainer{
+        width: 80%;
+    }
+
+
+}

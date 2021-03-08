@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head') %> 
+<body>
+    <%- include('./partials/header') %> 
+      <h1 class="pruebaTitle">Edición de Cuenta</h1>
+      <div class="formContainer">
+          <form action="" enctype="multipart/form-data">
+              <label for="name">Nombre</label>
+              <input type="text" name="name">
+              <label for="surname">Apellido</label>
+              <input type="text" name="surname">
+              <label for="email">Email</label>
+              <input type="email" name="email">
+              <label for="phone">Telefono</label>
+              <input type="tel" name="phone">
+              <button type="submit">Editar Datos</button>
+          </form>
+      </div>
+      <%- include('./partials/scripts') %> 
+      </body>

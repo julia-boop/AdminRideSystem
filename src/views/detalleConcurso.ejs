@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head') %> 
+<body>
+    <%- include('./partials/header') %> 
+      <div class="infoConcurso">
+          <h1>Nombre del concurso</h1>
+          <h2>Club que lo hospeda</h2>
+          <h3>16 de Marzo al 18 de Marzo</h3>
+          <h4><a href="">Mira el anteprograma!</a></h4>
+          <h4><a href="/concurso/1/edit">Editar Concurso</a></h4>
+          <h4><a href="/concurso/1/edit">Finalizar Concurso</a></h4>
+      </div>
+      <div class="pruebasContainer">
+          <h3>Pruebas</h3>
+          <h5 class="slide"><i class="fas fa-arrow-right"></i> ¡Desliza para inscribirte y ver el detalle de la prueba!</h5>
+          <div class="tableContainer">
+                <table>
+                    <tr>
+                        <th>Dia</th>
+                        <th>Hora</th>
+                        <th>Numero</th>
+                        <th>Tipo</th>
+                        <th>Altura</th>
+                        <th>Definicion</th>
+                        <th>Articulo</th>
+                        <th>Categoria</th>
+                        <th>Valor</th>
+                        <th>Cantidad</th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                    <tr>
+                        <td>Jueves 16</td>
+                        <td>8:00</td>
+                        <td>1</td>
+                        <td>S.V.</td>
+                        <td>120</td>
+                        <td>2F</td>
+                        <td>1.1.1.1</td>
+                        <td>2nd y Amateur</td>
+                        <td>$2200</td>
+                        <td>53</td>
+                        <td><a href="/concurso/1/2/inscripcion">Inscribirme</a></td>
+                        <td><a href="/concurso/1/2/detail">Detalle</a></td>
+                    </tr>
+                    <tr>
+                        <form action=""></form>
+                        <td><input type="text" class="prue"></td>
+                        <td><input type="text" class="prue"></td>
+                        <td><input type="text" class="prue"></td>
+                        <td><input type="text" class="prue"></td>
+                        <td><input type="text" class="prue"></td>
+                        <td><input type="text" class="prue"></td>
+                        <td><input type="text" class="prue"></td>
+                        <td><input type="text" class="prue"></td>
+                        <td><input type="text" class="prue"></td>
+                        <td><input type="text" class="prue"></td>
+                        <td><button type="submit" class="but">Crear</button></td>
+                        <td><button type="submit" class="but"><a href="/concurso/1/2/edit" style="color: black;"> Editar</a></button></td>
+                        </form>
+                    </tr>
+                </table>
+            </div>
+      </div>
+      <%- include('./partials/scripts') %>
+      </body>
