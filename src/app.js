@@ -19,6 +19,6 @@ app.use('/user', userRouter);
 app.use('/concurso', concursoRouter);
 
 
-app.listen(3000, function(){
+app.listen(3002, function(){
     console.log('el servidor esta corriendoooooooo :)')
 })
