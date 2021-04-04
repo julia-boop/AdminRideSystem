@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head') %> 
+<body>
+    <%- include('./partials/header') %> 
+      <h1 class="pruebaTitle" style="margin-bottom: 40px
+      ;">Panel de Administración para Moi</h1>
+      <div class="clientContainer">
+          <h2>Clientes</h2>
+          <div class="clients">
+            <% for(let i = 0 ; i < hipicos.length ; i ++) {%>
+                <div>
+                    <h3><%= hipicos[i].nombre %> </h3>
+                </div>
+            <% } %>  
+          </div>
+          
+      </div>
+      <div class="debtContainer">
+          <h2>Clientes con Deudas</h2>
+          <div class="contt">
+              <% for(let i = 0 ; i < hDeuda.length ; i ++) {%> 
+                <div class="clientTotalDebt">
+                    <h2><%= hDeuda[i].nombre %> </h2>
+                    <h3>Subscripcion Mensual: $  <%= mensual %> </h3>
+                    <% for(let j = 0 ; j < hDeuda[i].Concurso.length ; j ++) {%> 
+                        <div class="clientPartialDebt">                        
+                            <h3><%= hDeuda[i].Concurso[j].nombre %> </h3>
+                            <h4><%= hDeuda[i].Concurso[j].fecha %></h4>
+                            <h4>Total Recaudado:  $  <%= concursoCalc[i][j] %> </h4>
+                            <h4>Comision%:  $  <%= Number(concursoCalc[i][j]*0.15).toFixed(0) %> </h4>
+                            <h3 style="border-top:1px solid black;">Deuda Parcial:$  <%= Number(concursoCalc[i][j]*0.15).toFixed(0) %></h3>
+                        </div>
+                    <% } %> 
+                    <h3 style="border-top:1px solid black;">Deuda Total:$ <%= deuda[i] %> </h3>
+                  </div>
+              <% } %> 
+          </div>
+      </div>
+      <%- include('./partials/scripts') %>
+      </body>

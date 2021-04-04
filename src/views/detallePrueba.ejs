@@ -3,38 +3,47 @@
     <%- include('./partials/head') %> 
 <body>
     <%- include('./partials/header') %> 
-      <div class="infoConcurso">
-          <h1>Nombre del concurso</h1>
-          <h2>Club que lo hospeda</h2>
-          <h3>16 de Marzo al 18 de Marzo</h3>
-          <h4>Altura:120</h4>
-          <h4>Definicion: 2F</h4>
-          <h4>Numero: 3</h4>
+      <div class="infoConcurso animate__animated animate__fadeInRight animate__slow">
+          <h1><%= concurso.nombre %> </h1>
+          <h2><%= concurso.Hipico.nombre %> </h2>
+          <h3><%= prueba.nombre %> </h3>
+          <h3><%= prueba.dia %> </h3>
+          <h4>Altura: <%= prueba.altura %> </h4>
+          <h4>Definicion: <%= prueba.definicion %> </h4>
+          <h4>Numero: <%= prueba.numero %> </h4>
       </div>
       <div class="pruebasContainer">
-      <div class="tableContainer">
-          <table>
-            <tr>
-                <th>Numero</th>
-                <th>Nombre</th>
-                <th>Apellido</th>
-                <th>Caballo</th>
-                <th>Categoria</th>
-                <th>Club</th>
-                <th>Pais</th>
-
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>Julia</td>
-                <td>Cordero</td>
-                <td>Branca</td>
-                <td>2nda</td>
-                <td>CHA</td>
-                <td>ARG</td>
-            </tr>
-          </table>
-      </div>
+        <h6 class="animate__animated animate__fadeInLeft animate__slow"> ¿Llenaste el formulario y todavia no te ves en la lista? Ingresa a tu cuenta y luego a "Pagar Inscripciones" para finalizar el proceso</h6>
+        <% if(inscripciones.length == 0 ){ %> 
+            <h4 class="animate__animated animate__fadeInLeft animate__slow">Todavia no se inscribio nadie en esta prueba, querés ser el primer@? <a href="/concurso/<%= concurso.id %>/<%= prueba.id %>/inscripcion">Ingresá acá</a> </h4>
+        <% } else {%>
+        <div class="tableContainer">
+            <table>
+              <tr>
+                  <th>Numero</th>
+                  <th>Nombre</th>
+                  <th>Apellido</th>
+                  <th>Caballo</th>
+                  <th>Categoria</th>
+                  <th>Club</th>
+                  <th>Pais</th>
+  
+              </tr>
+              <% for(let i = 0 ; i < inscripciones.length ; i ++) {%> 
+                  <tr>
+                      <td><%= i + 1 %> </td>
+                      <td><%= inscripciones[i].nombre %> </td>
+                      <td><%= inscripciones[i].apellido %> </td>
+                      <td><%= inscripciones[i].caballo %> </td>
+                      <td><%= inscripciones[i].Categoria.nombre %> </td>
+                      <td><%= inscripciones[i].club.toUpperCase() %> </td>
+                      <td><%= inscripciones[i].pais %> </td>
+                  </tr>
+              <% } %> 
+            </table>
+            
+        </div>
+      <% } %>  
     </div>
       <%- include('./partials/scripts') %>
       </body>

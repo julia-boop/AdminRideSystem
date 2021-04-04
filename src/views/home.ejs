@@ -1,45 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-  <%- include('./partials/head') %> 
+<%- include('./partials/head') %> 
 <body>
-  <%- include('./partials/header') %> 
-    <div class="portraitContainer">
-        <img src="/images/branca3.jpg" alt="">
-        <div class="intro">
-            <h1>Gestioná tus inscripciones. Fácil, rápido, seguro.</h1>
-        </div>
-    </div>
-    <h1 class="pruebaTitle">Próximos concursos...</h1>
-
-    <div class="concursosContainer row">
-        <div class="">
-          <img src="/images/logo.jpg" alt="">
-          <h1>Nombre del Club</h1>
-          <h2>Nombre del Concurso</h2>
-          <h3>12 de Marzo al 15 de Marzo</h3>
-          <a href="/concurso/1/detail">Mira las pruebas disponibles!</a>
-        </div>
-        <div class="">
-          <img src="/images/logo.jpg" alt="">
-          <h1>Nombre del Club</h1>
-          <h2>Nombre del Concurso</h2>
-          <h3>12 de Marzo al 15 de Marzo</h3>
-          <a href="">Mira las pruebas disponibles!</a>
-        </div>
-        <div class="">
-          <img src="/images/logo.jpg" alt="">
-          <h1>Nombre del Club</h1>
-          <h2>Nombre del Concurso</h2>
-          <h3>12 de Marzo al 15 de Marzo</h3>
-          <a href="">Mira las pruebas disponibles!</a>
-        </div>
-        <div class="">
-          <img src="/images/logo.jpg" alt="">
-          <h1>Nombre del Club</h1>
-          <h2>Nombre del Concurso</h2>
-          <h3>12 de Marzo al 15 de Marzo</h3>
-          <a href="">Mira las pruebas disponibles!</a>
-        </div>
-    </div>
-    <%- include('./partials/scripts') %></body>
+	<%- include('./partials/header') %> 
+	<div class="portraitContainer">
+		<img src="/images/branca3.jpg" alt="">
+		<div class="intro animate__animated animate__fadeInLeft animate__slow">
+			<h1>Gestioná tus inscripciones. Fácil, rápido, seguro.</h1>
+		</div>
+	</div>
+	<h1 class="pruebaTitle animate__animated animate__fadeInDown animate__slow">Próximos concursos...</h1>
+	<div class="concursosContainer row">
+		<% for(let i = 0 ; i < 5 ; i++){ %> 
+			<div class="<%=(concurso[i].estado == 1) ? '' : 'fin'%>">
+				<img src="/images/uploads/<%= concurso[i].Hipico.logo %> " alt="">
+				<h1 style="text-align: center;"><%= concurso[i].Hipico.nombre %> </h1>
+				<h2><%= concurso[i].nombre %> </h2>
+				<h3><%= concurso[i].fecha %> </h3>
+				<% if(concurso[i].estado == 1) {%>        
+					<a href="/concurso/<%= concurso[i].id %>/detail">Mirar las pruebas disponibles</a>            
+				<% } else { %>  
+					<a href="">Este concurso ya fue finalizado</a>   
+				<% } %>  
+			</div>
+		<% } %> 
+		<a style="text-align: center; margin-bottom: 50px; font-size: 20px; color: black;" href="/concurso" class="col-12" >Ver todos los concursos disponibles</a>
+	</div>   
+	<%- include('./partials/scripts') %></body>
 </html>

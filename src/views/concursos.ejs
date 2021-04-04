@@ -5,39 +5,24 @@
     <%- include('./partials/header') %> 
       <div class="portadaConcurso">
           <img src="/images/branca.jpg" alt="">
-          <div class="banner">
+          <div class="banner animate__animated animate__fadeInLeft animate__slow">
               <h1>Busca el concurso, inscribite, y listo!</h1>
           </div>
       </div>
       <div class="concursosContainer row">
-          <div class="">
-            <img src="/images/logo.jpg" alt="">
-            <h1>Nombre del Club</h1>
-            <h2>Nombre del Concurso</h2>
-            <h3>12 de Marzo al 15 de Marzo</h3>
-            <a href="/concurso/1/detail">Mira las pruebas disponibles!</a>
+        <% for(let i = 0 ; i < concurso.length ; i++){ %> 
+          <div class="<%=(concurso[i].estado == 1) ? '' : 'fin'%>">
+            <img src="/images/uploads/<%= concurso[i].Hipico.logo %> " alt="">
+            <h1 style="text-align: center;"><%= concurso[i].Hipico.nombre %> </h1>
+            <h2><%= concurso[i].nombre %> </h2>
+            <h3><%= concurso[i].fecha %> </h3>
+            <% if(concurso[i].estado == 1) {%>        
+              <a href="/concurso/<%= concurso[i].id %>/detail">Mirar las pruebas disponibles</a>            
+            <% } else { %>  
+              <a href="">Este concurso ya fue finalizado</a>   
+            <% } %>  
           </div>
-          <div class="">
-            <img src="/images/logo.jpg" alt="">
-            <h1>Nombre del Club</h1>
-            <h2>Nombre del Concurso</h2>
-            <h3>12 de Marzo al 15 de Marzo</h3>
-            <a href="">Mira las pruebas disponibles!</a>
-          </div>
-          <div class="">
-            <img src="/images/logo.jpg" alt="">
-            <h1>Nombre del Club</h1>
-            <h2>Nombre del Concurso</h2>
-            <h3>12 de Marzo al 15 de Marzo</h3>
-            <a href="">Mira las pruebas disponibles!</a>
-          </div>
-          <div class="">
-            <img src="/images/logo.jpg" alt="">
-            <h1>Nombre del Club</h1>
-            <h2>Nombre del Concurso</h2>
-            <h3>12 de Marzo al 15 de Marzo</h3>
-            <a href="">Mira las pruebas disponibles!</a>
-          </div>
+        <% } %> 
       </div>
       <%- include('./partials/scripts') %>
 

@@ -21,7 +21,7 @@
 }
 
 .btnMenu {
-    position: fixed;
+    position: absolute;
     z-index: 50;
     top: -2.5%;
     right: 2%;
@@ -308,6 +308,10 @@ svg:focus{
     text-decoration: underline;
 }
 
+.fin{
+    opacity: 0.3;
+}
+
 
 /* --------------------------DETALLE CONCURSOS-------------------------- */
 
@@ -315,6 +319,15 @@ svg:focus{
     width: 100%;
     margin-top: 40px;
     margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.infoConcurso img{
+    width: 10%;
+    border-radius:50% ;
 }
 
 .infoConcurso h1,.infoConcurso h2,.infoConcurso h3,.infoConcurso h4{
@@ -501,6 +514,8 @@ svg:focus{
     width: 100%;
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
     margin: 20px;
     background-color: whitesmoke;
     border-radius: 5px;
@@ -508,6 +523,7 @@ svg:focus{
 }
 
 .clientTotalDebt{
+    width: 50%;
     margin: 20px;
     padding: 15px;
     background-color: rgb(170, 170, 170);
@@ -561,6 +577,15 @@ svg:focus{
 
 .pay button a:hover{
     color: white;
+}
+
+.payCourse{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    border-bottom: 1px solid grey;
 }
 
 /* --------------------------MEDIA QUERIES-------------------------- */

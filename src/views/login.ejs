@@ -3,12 +3,14 @@
   <%- include('./partials/head') %> 
 <body>
   <%- include('./partials/header') %> 
+  <h1 class="pruebaTitle animate__animated animate__fadeInDown animate__slow">Inciar Sesion</h1>
+
       <div class="formContainer">
-          <form action="">
+          <form action="/user/login" method="POST">
               <label for="email">Email</label>
               <input type="email" name="email" id="">
-              <label for="password">Contraseña</label>
-              <input type="password" name="password">
+              <label for="contrasena">Contraseña</label>
+              <input type="password" name="contrasena">
               <p>¿Todavía no tenes cuenta? <a href="/user/register">Registrate acá</a></p> 
               <button type="submit">Iniciar Sesion</button>
           </form>
